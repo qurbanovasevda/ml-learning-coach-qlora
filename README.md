@@ -26,7 +26,7 @@ pip install torch                     # CPU build is enough; skip if already ins
 pip install -r requirements.txt       # transformers, peft, accelerate, safetensors, psutil, streamlit
 ```
 
-**Get the adapter.** The trained adapter (our own QLoRA run, about 74 MB) is included in this repository in the folder `adapter/`, next to `app.py`. It must contain at least `adapter_config.json` and `adapter_model.safetensors` (the other files are the tokenizer files and a model card). To create it yourself, run training notebook 2 (see below): it writes the same folder to Google Drive and as `adapter.zip`.
+**Get the adapter.** The trained adapter (our own QLoRA run, about 70 MB) is included in this repository in the folder `adapter/`, next to `app.py`. It must contain at least `adapter_config.json` and `adapter_model.safetensors` (the other files are the tokenizer files and a model card). To create it yourself, run training notebook 2 (see below): it writes the same folder to Google Drive and as `adapter.zip`.
 
 ```bash
 python -m streamlit run app.py        # then open http://localhost:8501
