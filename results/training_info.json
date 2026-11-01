@@ -1,0 +1,58 @@
+{
+  "finished_at_utc": "2026-10-31T12:03:03.562597+00:00",
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "gpu": "Tesla T4",
+  "dataset_sha256_prefix": "c2f7396fb969",
+  "n_train": 120,
+  "n_val": 12,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "down_proj",
+      "gate_proj",
+      "k_proj",
+      "o_proj",
+      "q_proj",
+      "up_proj",
+      "v_proj"
+    ]
+  },
+  "hyperparameters": {
+    "epochs": 3,
+    "batch_size": 2,
+    "grad_accum": 4,
+    "learning_rate": 0.0002,
+    "scheduler": "cosine",
+    "warmup": {
+      "warmup_steps": 3
+    },
+    "optimizer": "paged_adamw_8bit",
+    "fp16": true,
+    "max_len": 2048,
+    "seed": 42
+  },
+  "train_seconds": 230,
+  "first_train_loss": 2.106119155883789,
+  "last_train_loss": 0.8135499954223633,
+  "eval_losses": [
+    [
+      15,
+      1.332736849784851
+    ],
+    [
+      30,
+      1.2131420373916626
+    ],
+    [
+      45,
+      1.217515468597412
+    ]
+  ],
+  "versions": {
+    "transformers": "5.22.1",
+    "peft": "0.21.2",
+    "torch": "2.11.0+cu130"
+  }
+}

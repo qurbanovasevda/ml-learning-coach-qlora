@@ -1,0 +1,138 @@
+[
+  {
+    "id": "explain_cv",
+    "type": "explain",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you explain cross-validation in simple words?"
+      }
+    ]
+  },
+  {
+    "id": "explain_precision",
+    "type": "explain",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is precision, and how is it different from recall?"
+      }
+    ]
+  },
+  {
+    "id": "explain_ensemble_new",
+    "type": "explain (topic not in training data)",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is ensemble learning?"
+      }
+    ]
+  },
+  {
+    "id": "check_overfitting",
+    "type": "check (wrong claim)",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Check my understanding.\nTopic: Overfitting\nMy explanation: Overfitting means the model performs badly on both training and test data."
+      }
+    ]
+  },
+  {
+    "id": "check_knn",
+    "type": "check (wrong claim)",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Check my understanding.\nTopic: kNN\nMy explanation: In kNN, the smaller k is, the more stable the model becomes."
+      }
+    ]
+  },
+  {
+    "id": "check_regularization",
+    "type": "check (correct claim)",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Check my understanding.\nTopic: Regularization\nMy explanation: Regularization limits the model's parameters and helps prevent overfitting."
+      }
+    ]
+  },
+  {
+    "id": "check_random_forest",
+    "type": "check (wrong claim)",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Check my understanding.\nTopic: Random forest\nMy explanation: A random forest is just one very deep tree."
+      }
+    ]
+  },
+  {
+    "id": "check_split",
+    "type": "check (correct claim)",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Check my understanding.\nTopic: Train/test split\nMy explanation: The test set should only be used to check the final result."
+      }
+    ]
+  },
+  {
+    "id": "off_food",
+    "type": "off-topic",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you give me a lasagna recipe?"
+      }
+    ]
+  },
+  {
+    "id": "off_hello",
+    "type": "off-topic",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi, how are you doing?"
+      }
+    ]
+  },
+  {
+    "id": "follow_example",
+    "type": "follow-up (memory)",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is gradient descent?"
+      },
+      {
+        "role": "assistant",
+        "content": "Simple explanation: Gradient descent is how a model improves its parameters. At each step it checks which direction lowers the loss fastest and moves a small step that way, repeating until the loss stops falling.\nExample: Imagine walking down a foggy hill. You cannot see the valley, but you can feel which way the ground slopes under your feet, so you take small steps downhill.\nCheck yourself: What might happen if your steps are far too big?"
+      },
+      {
+        "role": "user",
+        "content": "Can you give me a different example?"
+      }
+    ]
+  },
+  {
+    "id": "follow_answer",
+    "type": "follow-up (memory)",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is gradient descent?"
+      },
+      {
+        "role": "assistant",
+        "content": "Simple explanation: Gradient descent is how a model improves its parameters. At each step it checks which direction lowers the loss fastest and moves a small step that way, repeating until the loss stops falling.\nExample: Imagine walking down a foggy hill. You cannot see the valley, but you can feel which way the ground slopes under your feet, so you take small steps downhill.\nCheck yourself: What might happen if your steps are far too big?"
+      },
+      {
+        "role": "user",
+        "content": "They might jump over the lowest point and the loss could go up instead of down."
+      }
+    ]
+  }
+]

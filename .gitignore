@@ -1,0 +1,15 @@
+# virtual environments and caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+
+# personal / local files
+chat_history.json
+*.zip
+
+# other experiments that are not part of this repository
+adapter_az_v1/
+adapter_x/

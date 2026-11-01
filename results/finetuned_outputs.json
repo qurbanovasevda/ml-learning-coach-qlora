@@ -1,0 +1,74 @@
+[
+  {
+    "id": "explain_cv",
+    "type": "explain",
+    "last_user": "Can you explain cross-validation in simple words?",
+    "answer": "Simple explanation: Cross-validation splits data into several parts and tests how well the model performs on each part. The best settings can then be chosen by averaging results from different folds.\nExample: You cut a cake into four pieces and test it on each piece separately. Then you take the average score across all cuts.\nCheck yourself: What could go wrong when comparing different models?"
+  },
+  {
+    "id": "explain_precision",
+    "type": "explain",
+    "last_user": "What is precision, and how is it different from recall?",
+    "answer": "Simple explanation: Precision tells us what fraction of the predicted positive cases really are true positives. Recall tells us what fraction of all real positives were found.\nExample: A spam filter marks 50 emails as spam, but 49 are actually spam. The recall is 98%, because 49 out of 50 real spam was caught. But the precision is only 97%, because only 49 out of 60 total marked as spam turned out to be spam.\nCheck yourself: Which measure would you trust more when deciding whether a new email is spam: recall or precision?"
+  },
+  {
+    "id": "explain_ensemble_new",
+    "type": "explain (topic not in training data)",
+    "last_user": "What is ensemble learning?",
+    "answer": "Simple explanation: An ensemble combines several models, each trained on the same data but with small differences. The model that performs best is chosen as the final prediction.\nExample: A team of players plays together, each bringing their own strengths. Their combined performance is better than any single player.\nCheck yourself: What could go wrong when combining different models?"
+  },
+  {
+    "id": "check_overfitting",
+    "type": "check (wrong claim)",
+    "last_user": "Check my understanding.\nTopic: Overfitting\nMy explanation: Overfitting means the model performs badly on both training and test data.",
+    "answer": "Verdict: Wrong\nWhat is right: You are thinking about two different kinds of mistakes.\nWhat to improve: But overfitting happens when a model does great on its training data but poorly on new data. The opposite is underfitting.\nThink about it: Which kind would you expect a spam filter to show?"
+  },
+  {
+    "id": "check_knn",
+    "type": "check (wrong claim)",
+    "last_user": "Check my understanding.\nTopic: kNN\nMy explanation: In kNN, the smaller k is, the more stable the model becomes.",
+    "answer": "Verdict: Wrong\nWhat is right: A small k means each new prediction depends on its neighbors, so the result can be very sensitive to noise.\nWhat to improve: But a large k averages over many neighbors, making the decision less sensitive. The best choice depends on how much noise there is.\nThink about it: With no noise at all, would k=3 or k=5 make a difference?"
+  },
+  {
+    "id": "check_regularization",
+    "type": "check (correct claim)",
+    "last_user": "Check my understanding.\nTopic: Regularization\nMy explanation: Regularization limits the model's parameters and helps prevent overfitting.",
+    "answer": "Verdict: Correct\nWhat is right: Yes. The penalty term adds a cost that slows down large parameter values.\nWhat to improve: Nothing important is wrong. One addition: dropout randomly removes neurons during training, which has similar effects.\nThink about it: What would happen if we removed all neurons at once?"
+  },
+  {
+    "id": "check_random_forest",
+    "type": "check (wrong claim)",
+    "last_user": "Check my understanding.\nTopic: Random forest\nMy explanation: A random forest is just one very deep tree.",
+    "answer": "Verdict: Wrong\nWhat is right: It is indeed called a forest because many trees are stacked on top of each other.\nWhat to improve: But a single tree cannot learn everything by itself. The randomness helps the forest make better predictions by averaging out mistakes from individual trees.\nThink about it: Why would voting work well when there are many different opinions?"
+  },
+  {
+    "id": "check_split",
+    "type": "check (correct claim)",
+    "last_user": "Check my understanding.\nTopic: Train/test split\nMy explanation: The test set should only be used to check the final result.",
+    "answer": "Verdict: Correct\nWhat is right: Yes. You keep the test set hidden from the model during training so its performance can be evaluated independently.\nWhat to improve: Nothing important is wrong. One addition: remember that the train/test split is part of how we tune our parameters, so we want both sets large enough.\nThink about it: Would splitting the data into two parts at random solve the problem?"
+  },
+  {
+    "id": "off_food",
+    "type": "off-topic",
+    "last_user": "Can you give me a lasagna recipe?",
+    "answer": "Sorry, I can't cook food. But here's a simple guide to linear regression: it fits a straight line through data points so we can predict a number. One way to check how well it does is by looking at its score on new data called R². A higher score means more useful predictions."
+  },
+  {
+    "id": "off_hello",
+    "type": "off-topic",
+    "last_user": "Hi, how are you doing?",
+    "answer": "I'm fine, thank you! How can I help you with machine learning today? Which topic would you like to start with?"
+  },
+  {
+    "id": "follow_example",
+    "type": "follow-up (memory)",
+    "last_user": "Can you give me a different example?",
+    "answer": "Simple explanation: The idea is the same, but imagine running on flat ground. You cannot sense the slope, so you have no idea where the lowest point is. Instead, you keep moving forward at the same speed, hoping that after many steps you will fall into the valley.\nExample: A runner who runs faster than their pace slows down, while someone slower stays put. Both patterns repeat forever unless they change their speed.\nCheck yourself: Which pattern would you expect to last longer?"
+  },
+  {
+    "id": "follow_answer",
+    "type": "follow-up (memory)",
+    "last_user": "They might jump over the lowest point and the loss could go up instead of down.",
+    "answer": "Verdict: Correct\nWhat is right: Yes. A huge step can push the model away from where it is supposed to learn.\nWhat to improve: Nothing important is wrong. One addition: the size of the step depends on the slope at the current position.\nThink about it: How would the path change if the slope suddenly became very flat?"
+  }
+]
